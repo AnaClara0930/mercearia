@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="2318271-icone-do-perfil-do-usuario-gratis-vetor-removebg-preview.png" />
+    <None Remove="c9f5cc2c-2c7b-4bb0-8787-cd563d839a49-removebg-preview.png" />
+    <None Remove="WhatsApp_Image_2022-11-08_at_14.27.33-removebg-preview.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="2318271-icone-do-perfil-do-usuario-gratis-vetor-removebg-preview.png" />
+    <Resource Include="c9f5cc2c-2c7b-4bb0-8787-cd563d839a49-removebg-preview.png" />
+    <Resource Include="WhatsApp_Image_2022-11-08_at_14.27.33-removebg-preview.png" />
+  </ItemGroup>
+
+</Project>
