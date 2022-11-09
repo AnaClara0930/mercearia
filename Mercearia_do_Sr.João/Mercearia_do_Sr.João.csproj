@@ -8,15 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="2318271-icone-do-perfil-do-usuario-gratis-vetor-removebg-preview.png" />
-    <None Remove="c9f5cc2c-2c7b-4bb0-8787-cd563d839a49-removebg-preview.png" />
-    <None Remove="WhatsApp_Image_2022-11-08_at_14.27.33-removebg-preview.png" />
+    <None Remove="botao-adicionar.png" />
+    <None Remove="carrinho-de-compras.png" />
+    <None Remove="limpar-limpo.png" />
+    <None Remove="Logo_verde_orgânico_mercearia_mercado_marcadinho_grátis__3_-removebg-preview %281%29.png" />
+    <None Remove="procurar.png" />
+    <None Remove="produtos-de-higiene %281%29.png" />
+    <None Remove="produtos-de-higiene.png" />
+    <None Remove="sombra-de-usuario-masculino %281%29.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="2318271-icone-do-perfil-do-usuario-gratis-vetor-removebg-preview.png" />
-    <Resource Include="c9f5cc2c-2c7b-4bb0-8787-cd563d839a49-removebg-preview.png" />
-    <Resource Include="WhatsApp_Image_2022-11-08_at_14.27.33-removebg-preview.png" />
+    <Resource Include="botao-adicionar.png" />
+    <Resource Include="carrinho-de-compras.png" />
+    <Resource Include="limpar-limpo.png" />
+    <Resource Include="Logo_verde_orgânico_mercearia_mercado_marcadinho_grátis__3_-removebg-preview (1).png" />
+    <Resource Include="procurar.png" />
+    <Resource Include="produtos-de-higiene (1).png" />
+    <Resource Include="produtos-de-higiene.png" />
+    <Resource Include="sombra-de-usuario-masculino (1).png" />
   </ItemGroup>
 
 </Project>

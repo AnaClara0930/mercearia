@@ -24,5 +24,46 @@ namespace Mercearia_do_Sr.João
         {
             InitializeComponent();
         }
+
+        private void FazerLogin(object sender, RoutedEventArgs e)
+        {
+            if (VerificaCampos() == true)
+            {
+                string email = txtEmail.Text;
+                string senha = txtPassword.Password;
+                Usuario usuario = ConsultasUsuario.ObterUsuarioPeloEmailSenha(email, senha);
+                if (usuario != null)
+                {
+                    AbrirTelaMenu();
+                }
+                else
+                {
+                    MessageBoxResult result = MessageBox.Show(
+                    "Email ou senha incorretos",
+                    "Atenção",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning
+                    );
+                }
+            }
+        }
+
+        private bool VerificaCampos()
+        {
+            if (txtEmail.Text != "" && txtPassword.Password != "")
+            {
+                return true;
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show(
+                   "Preencha todos os campos",
+                   "Atenção",
+                   MessageBoxButton.OK,
+                   MessageBoxImage.Warning
+                );
+                return false;
+            }
+        }
     }
 }

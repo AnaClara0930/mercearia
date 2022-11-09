@@ -1,0 +1,50 @@
+﻿<Window x:Class="Mercearia_do_Sr.João.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mercearia_do_Sr.João"
+        mc:Ignorable="d"
+        Title="Menu" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFFC04F" Offset="0.22"/>
+                <GradientStop Color="#FFE87C37" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Center" Height="418" Margin="0,-111,0,0" VerticalAlignment="Top" Width="408" Source="/Logo_verde_orgânico_mercearia_mercado_marcadinho_grátis__3_-removebg-preview (1).png"/>
+        <Button Content="" HorizontalAlignment="Left" Height="52" Margin="104,269,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click" FontSize="22" FontFamily="Malgun Gothic Semilight" Foreground="White" BorderBrush="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA7C957" Offset="0"/>
+                    <GradientStop Color="#FF346B14" Offset="0.89"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="55" Margin="157,279,0,0" VerticalAlignment="Top" Width="32" Source="/produtos-de-higiene (1).png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Malgun Gothic Semilight" Height="46" Width="126" FontSize="30" FontWeight="Bold" Foreground="White" Text="Produtos"/>
+        <Button Content="" HorizontalAlignment="Center" Height="52" Margin="0,266,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click" FontSize="22" FontFamily="Malgun Gothic Semilight" Foreground="White" BorderBrush="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA7C957" Offset="0"/>
+                    <GradientStop Color="#FF346B14" Offset="0.89"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="52" Margin="565,266,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click" FontSize="22" FontFamily="Malgun Gothic Semilight" Foreground="White" BorderBrush="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA7C957" Offset="0"/>
+                    <GradientStop Color="#FF346B14" Offset="0.89"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Center" Margin="0,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Malgun Gothic Semilight" Height="46" Width="116" FontSize="30" FontWeight="Bold" Foreground="White"><Run Language="pt-br" Text="Usuários"/><LineBreak/><Run Language="pt-br"/></TextBlock>
+        <Image HorizontalAlignment="Center" Height="41" Margin="0,274,0,0" VerticalAlignment="Top" Width="36" Source="/sombra-de-usuario-masculino (1).png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="539,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Malgun Gothic Semilight" Height="46" Width="190" FontSize="30" FontWeight="Bold" Foreground="White"><Run Language="pt-br" Text="Efetuar Venda"/><LineBreak/><Run Language="pt-br"/></TextBlock>
+        <Image HorizontalAlignment="Left" Height="41" Margin="616,274,0,0" VerticalAlignment="Top" Width="36" Source="/carrinho-de-compras.png"/>
+        <Button Content="Sair" HorizontalAlignment="Center" Height="26" Margin="0,382,0,0" VerticalAlignment="Top" Width="174" BorderBrush="White" FontSize="14" Background="#FFF8AD48" Foreground="#FFFFFBFB" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
