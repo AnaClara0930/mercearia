@@ -15,18 +15,14 @@ using System.Windows.Shapes;
 namespace Mercearia_do_Sr.João
 {
     /// <summary>
-    /// Lógica interna para GerenciarProduto.xaml
+    /// Lógica interna para VenderProduto.xaml
     /// </summary>
-    public partial class GerenciarProduto : Window
+    public partial class VenderProduto : Window
     {
-        public GerenciarProduto()
+        public VenderProduto()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

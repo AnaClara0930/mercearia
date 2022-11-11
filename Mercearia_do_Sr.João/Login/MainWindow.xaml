@@ -1,0 +1,25 @@
+﻿<Window x:Class="Mercearia_do_Sr.João.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mercearia_do_Sr.João"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="1.092,0.618">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFFC04F" Offset="0.22"/>
+                <GradientStop Color="#FFE87C37" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Center" Height="125" VerticalAlignment="Top" Width="126" Source="/Login/do-utilizador (2).png" Margin="0,22,0,0"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Center" Cursor="" TextDecorations="{x:Null}" FontFamily="Malgun Gothic Semilight" Height="30" Width="104" FontSize="22" Margin="-180,-100,0,0" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Center" Cursor="" TextDecorations="{x:Null}" FontFamily="Malgun Gothic Semilight" Height="30" Width="104" FontSize="22" Margin="-180,75,0,0" Foreground="White"/>
+        <Button x:Name="btnEntrar" Content="Entrar" HorizontalAlignment="Center" Height="28" Margin="0,270,0,0" VerticalAlignment="Center" Width="174" BorderBrush="White" FontSize="14" Background="#FFF8AD48" Foreground="#FFFFFBFB" Click="Click_Entrar"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Center" Height="40" Margin="0,-15,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="287" Background="#FFF7A746" SelectionBrush="White" BorderBrush="White" FontSize="16"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Center" Width="287" Height="38" Background="#FFF19741" SelectionBrush="White" BorderBrush="White" FontSize="16"/>
+        <Button x:Name="btnEsqueceuSenha" Content="Esqueceu a senha ?" HorizontalAlignment="Center" Height="28" Margin="0,350,0,0" VerticalAlignment="Center" Width="174" BorderBrush="#FFEA8239" FontSize="14" Background="#FFEA8239" Foreground="White" Click="Click_EsqueceuSenha"/>
+
+    </Grid>
+</Window>

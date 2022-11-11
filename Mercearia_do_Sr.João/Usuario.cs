@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 public class Usuario
 {
     public int id { get; set; }
+    public string nome { get; set; }
     public string email { get; set; }
     public string senha { get; set; }
+    public string tipoUsuario { get; set; }
+    public DateTime dataHoraInserido { get; set; }
+    public DateTime dataHoraExclusao { get; set; }
+    public DateTime DataHoraAtualizacao { get; set; }
 }

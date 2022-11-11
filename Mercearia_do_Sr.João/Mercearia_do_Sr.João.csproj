@@ -11,22 +11,26 @@
     <None Remove="botao-adicionar.png" />
     <None Remove="carrinho-de-compras.png" />
     <None Remove="limpar-limpo.png" />
+    <None Remove="Login\do-utilizador %282%29.png" />
     <None Remove="Logo_verde_orgânico_mercearia_mercado_marcadinho_grátis__3_-removebg-preview %281%29.png" />
     <None Remove="procurar.png" />
     <None Remove="produtos-de-higiene %281%29.png" />
-    <None Remove="produtos-de-higiene.png" />
     <None Remove="sombra-de-usuario-masculino %281%29.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="botao-adicionar.png" />
-    <Resource Include="carrinho-de-compras.png" />
-    <Resource Include="limpar-limpo.png" />
-    <Resource Include="Logo_verde_orgânico_mercearia_mercado_marcadinho_grátis__3_-removebg-preview (1).png" />
-    <Resource Include="procurar.png" />
-    <Resource Include="produtos-de-higiene (1).png" />
-    <Resource Include="produtos-de-higiene.png" />
-    <Resource Include="sombra-de-usuario-masculino (1).png" />
+    <PackageReference Include="MySqlConnector.Logging.log4net" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="GerenciarProduto\botao-adicionar.png" />
+    <Resource Include="Login\do-utilizador (2).png" />
+    <Resource Include="Menu\carrinho-de-compras.png" />
+    <Resource Include="GerenciarProduto\limpar-limpo.png" />
+    <Resource Include="Menu\Logo_verde_orgânico_mercearia_mercado_marcadinho_grátis__3_-removebg-preview %281%29.png" />
+    <Resource Include="GerenciarProduto\procurar.png" />
+    <Resource Include="Menu\produtos-de-higiene %281%29.png" />
+    <Resource Include="Login\sombra-de-usuario-masculino %281%29.png" />
   </ItemGroup>
 
 </Project>
