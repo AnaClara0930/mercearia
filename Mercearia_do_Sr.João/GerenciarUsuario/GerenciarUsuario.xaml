@@ -26,8 +26,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="183,22,0,0" TextWrapping="Wrap" Text="Tipo Usuário" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="txtNomeUsuario" HorizontalAlignment="Left" Margin="66,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="37" Background="#FFFEBC4E" BorderBrush="#FFFAF9F6"/>
         <TextBox x:Name="txtEmailUsuario" HorizontalAlignment="Left" Margin="66,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="41" Background="#FFF7A947" BorderBrush="#FFEAEAEE"/>
-        <TextBox x:Name="txtxSenhaU" HorizontalAlignment="Left" Margin="67,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="37" BorderBrush="White" Background="#FFF29B42"/>
-        <TextBox x:Name="txtConfirmarSenha" HorizontalAlignment="Left" Margin="65,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Height="38" Background="#FFED8B3C" BorderBrush="#FFECF0F4"/>
         <TextBlock HorizontalAlignment="Left" Margin="65,91,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" FontSize="16"/>
         <TextBlock HorizontalAlignment="Left" Margin="67,158,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" FontSize="16"/>
         <TextBlock HorizontalAlignment="Left" Margin="67,229,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" FontSize="16"/>
@@ -40,7 +38,7 @@
                 <DataGridTextColumn Header="Senha"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnNovoUsuario" Content="Novo" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="77" FontSize="14" BorderBrush="#FF707070" Margin="41,381,0,0">
+        <Button x:Name="btnNovoUsuario" Content="Novo" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="77" FontSize="14" BorderBrush="#FF707070" Margin="41,381,0,0" Click="Click_NovoUsuario">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFCAFF4C" Offset="0"/>
@@ -72,6 +70,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <PasswordBox x:Name="txtSenha1" HorizontalAlignment="Left" Height="38" Margin="64,252,0,0" VerticalAlignment="Top" Width="246" Background="#FFF39D43" SelectionBrush="#FFFF6D00" BorderBrush="White"/>
+        <PasswordBox x:Name="txtConfirmaSenha" HorizontalAlignment="Left" Height="38" Margin="64,320,0,0" VerticalAlignment="Top" Width="246" Background="#FFEE8D3D" SelectionBrush="#FFFF6D00" BorderBrush="White"/>
 
     </Grid>
 </Window>

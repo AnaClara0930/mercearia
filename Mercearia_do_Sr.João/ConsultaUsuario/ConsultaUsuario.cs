@@ -37,8 +37,37 @@ public static class ConsultasUsuario
             }
         }
         return usuarioExistente;
+    }
+    public static bool NovoUsuario(string nome, string email, string senha)
+    {
+        var conexao = new MySqlConnection(ConexaoBD.Conexao.ConnectionString);
+        bool foiInserido = false;
+        string senhaCriptografada = Criptografia.CriptografiafarBase64(senha);
 
-    }    
+        try
+        {
+            conexao.Open();
+            var comando = conexao.CreateCommand();
+            comando.CommandText = @"Insert Into Usuario (nome,email,senha) values (@nome,@email,@senha)";
+            comando.Parameters.AddWithValue("@nome", nome);
+            comando.Parameters.AddWithValue("@email", email);
+            comando.Parameters.AddWithValue("@senha", senhaCriptografada);
+            var leitura = comando.ExecuteReader();
+            foiInserido = true;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            if (conexao.State == System.Data.ConnectionState.Open)
+            {
+                conexao.Close();
+            }
+        }
+        return foiInserido;
+    }
     public static Usuario ObterUsuarioPeloEmailSenha (string senha, string email)
     {
         var conexao = new MySqlConnection(ConexaoBD.Conexao.ConnectionString);
