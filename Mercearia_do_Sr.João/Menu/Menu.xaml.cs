@@ -25,9 +25,7 @@ namespace Mercearia_do_Sr.João
         }
         public Menu(string nome, string tipo)
         {
-            InitializeComponent();
-
-            var data = new DateOnly();
+            InitializeComponent();       
 
             if (tipo == "Gerente")
             {
@@ -37,7 +35,9 @@ namespace Mercearia_do_Sr.João
             {
                 VisualizacaoCaixa();
             }
-       
+
+            var data = new DateOnly();
+
             txtMensagem.Text = $"Olá {nome} hoje é dia {data}"; 
             
         }
@@ -71,6 +71,13 @@ namespace Mercearia_do_Sr.João
         {
             VenderProduto tela = new VenderProduto();
             tela.Show();
+        }
+
+        private void Click_Sair(object sender, RoutedEventArgs e)
+        {         
+            MainWindow tela = new MainWindow();
+            tela.Show();
+            Close();
         }
     }
 }

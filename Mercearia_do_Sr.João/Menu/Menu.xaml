@@ -44,7 +44,7 @@
         <Image HorizontalAlignment="Center" Height="41" Margin="0,150,0,0" VerticalAlignment="Center" Width="36" Source="/Login/sombra-de-usuario-masculino (1).png"/>
         <TextBlock HorizontalAlignment="Center" Margin="480,50,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Malgun Gothic Semilight" Height="46" Width="190" FontSize="30" FontWeight="Bold" Foreground="White"><Run Language="pt-br" Text="Efetuar Venda"/><LineBreak/><Run Language="pt-br"/></TextBlock>
         <Image HorizontalAlignment="Left" Height="41" Margin="616,274,0,0" VerticalAlignment="Top" Width="36" Source="/Menu/carrinho-de-compras.png"/>
-        <Button x:Name="btnSair" Content="Sair" HorizontalAlignment="Center" Height="26" Margin="0,320,0,0" VerticalAlignment="Center" Width="174" BorderBrush="White" FontSize="14" Background="#FFF8AD48" Foreground="#FFFFFBFB"/>
+        <Button x:Name="btnSair" Content="Sair" HorizontalAlignment="Center" Height="26" Margin="0,320,0,0" VerticalAlignment="Center" Width="174" BorderBrush="White" FontSize="14" Background="#FFF8AD48" Foreground="#FFFFFBFB" Click="Click_Sair"/>
         <TextBlock x:Name="txtMensagem" HorizontalAlignment="Center" Margin="0,390,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Malgun Gothic Semilight" Height="29" Width="444" FontSize="22" FontWeight="Bold" Foreground="Black"><Run Language="pt-br"/></TextBlock>
 
     </Grid>

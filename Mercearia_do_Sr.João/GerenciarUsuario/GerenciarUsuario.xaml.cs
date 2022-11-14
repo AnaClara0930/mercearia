@@ -25,10 +25,10 @@ namespace Mercearia_do_Sr.João
         }
         private void AbrirTelaMenu()
         {
-            Menu frmMenu = new Menu();
-            frmMenu.Show();
-            Close();
-        }
+            Menu tela = new Menu();
+            tela.Show();
+           
+        }       
         private void CadastrarUsuario()
         {
             if (VerificaCampos() == true)

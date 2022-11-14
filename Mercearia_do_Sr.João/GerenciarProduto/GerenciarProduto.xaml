@@ -16,7 +16,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="56,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="1.493,0.461"><Run Language="pt-br" Text="ID"/></TextBlock>
         <TextBox x:Name="txtIdProduto" HorizontalAlignment="Left" Margin="56,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68" Height="33" Background="#FFFEBE4E" Foreground="White" BorderBrush="White"/>
         <TextBlock HorizontalAlignment="Center" Margin="-640,-250,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18"><Run Language="pt-br" Text="Nome"/></TextBlock>
-        <TextBox x:Name="txtPrecoUnid1" HorizontalAlignment="Center" Margin="-250,-180,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="144" Height="31" TextChanged="TextBox_TextChanged" Background="#FFFEBD4E" BorderBrush="#FFF8F8F9" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="txtPrecoUnid" HorizontalAlignment="Center" Margin="-250,-180,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="144" Height="31" Background="#FFFEBD4E" BorderBrush="#FFF8F8F9" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,11 +27,11 @@
             </TextBox.RenderTransform>
         </TextBox>
         <TextBlock HorizontalAlignment="Left" Margin="56,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"><Run Language="pt-br" Text="Quantidade"/></TextBlock>
-        <TextBox x:Name="txtQtdProduto" HorizontalAlignment="Left" Margin="56,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Height="31" TextChanged="TextBox_TextChanged" Background="#FFF8AB47" BorderBrush="#FFF8F8F9"/>
+        <TextBox x:Name="txtQtdProduto" HorizontalAlignment="Left" Margin="56,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Height="31" Background="#FFF8AB47" BorderBrush="#FFF8F8F9"/>
         <TextBlock HorizontalAlignment="Left" Margin="185,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20" Margin="-250,-250,0,0"><Run Text="Preço"/><Run Text=" "/><Run Language="pt-br" Text="U"/><Run Text="nit"/><Run Language="pt-br" Text="á"/><Run Text="rio"/><Run Text=" "/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="56,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"><Run Language="pt-br" Text="Fornecedor"/></TextBlock>
-        <TextBox x:Name="txtFornecedor" HorizontalAlignment="Left" Margin="56,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Height="31" TextChanged="TextBox_TextChanged" Background="#FFF29B42" BorderBrush="#FFF8F8F9"/>
+        <TextBox x:Name="txtFornecedor" HorizontalAlignment="Left" Margin="56,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Height="31" Background="#FFF29B42" BorderBrush="#FFF8F8F9"/>
         <Button x:Name="btnNovoProduto" Content="Novo" HorizontalAlignment="Center" VerticalAlignment="Center" Height="33" Width="258" FontSize="14" BorderBrush="#FF707070" Margin="-400,173,0,0">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -65,7 +65,7 @@
             </Button.Background>
         </Button>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,72,34,75"/>
-        <TextBox x:Name="txtNomeProduto_Copy" HorizontalAlignment="Center" Margin="-550,-180,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="144" Height="31" TextChanged="TextBox_TextChanged" Background="#FFFEBD4E" BorderBrush="#FFF8F8F9" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="txtNomeProduto" HorizontalAlignment="Center" Margin="-550,-180,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="144" Height="31" Background="#FFFEBD4E" BorderBrush="#FFF8F8F9" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
