@@ -19,10 +19,15 @@ namespace Mercearia_do_Sr.João
     /// </summary>
     public partial class Menu : Window
     {
+        public Menu()
+        {
+             
+        }
         public Menu(string nome, string tipo)
         {
             InitializeComponent();
-            DateOnly data = new DateOnly();
+
+            var data = new DateOnly();
 
             if (tipo == "Gerente")
             {
@@ -41,7 +46,6 @@ namespace Mercearia_do_Sr.João
             btnProduto.Visibility = Visibility.Visible;
             btnUsuario.Visibility = Visibility.Visible;
             btnVenda.Visibility = Visibility.Visible;
-
         }
 
         public void VisualizacaoCaixa()

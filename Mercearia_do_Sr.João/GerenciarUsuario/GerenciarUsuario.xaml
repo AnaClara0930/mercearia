@@ -13,7 +13,7 @@
                 <GradientStop Color="#FFE87C37" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ComboBox HorizontalAlignment="Left" Margin="182,41,0,0" VerticalAlignment="Top" Width="128" Height="32" BorderBrush="#FFFFC04F">
+        <ComboBox x:Name="CbTipoUsuario" HorizontalAlignment="Left" Margin="182,51,0,0" VerticalAlignment="Top" Width="128" Height="32" BorderBrush="#FFFFC04F">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
@@ -21,22 +21,57 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Margin="65,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Height="32" Background="#FFFFC04F" BorderBrush="#FFF8EFEF"/>
-        <TextBlock HorizontalAlignment="Left" Margin="66,12,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="183,15,0,0" TextWrapping="Wrap" Text="Tipo Usuário" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="66,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="37" Background="#FFFEBC4E" BorderBrush="#FFFAF9F6"/>
-        <TextBox HorizontalAlignment="Left" Margin="66,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="41" Background="#FFF7A947" BorderBrush="#FFEAEAEE"/>
-        <TextBox HorizontalAlignment="Left" Margin="67,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="37" BorderBrush="White" Background="#FFF29B42"/>
-        <TextBox HorizontalAlignment="Left" Margin="65,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Height="38" Background="#FFED8B3C" BorderBrush="#FFECF0F4"/>
-        <TextBlock HorizontalAlignment="Left" Margin="65,94,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="67,162,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="67,233,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="70,296,0,0" TextWrapping="Wrap" Text="Confirmar Senha" VerticalAlignment="Top" FontSize="16"/>
-        <Button Content="Novo" HorizontalAlignment="Left" Margin="34,391,0,0" VerticalAlignment="Top" Width="77" Height="33" FontSize="20"/>
-        <Button Content="Alterar" HorizontalAlignment="Left" Margin="129,392,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.4,1.641" Width="79" Height="33" FontSize="20"/>
-        <Button Content="Excluir" HorizontalAlignment="Left" Margin="228,394,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.166,0.925" Width="83" Height="31" FontSize="20"/>
-        <Button Content="Limpar" HorizontalAlignment="Left" Margin="330,391,0,0" VerticalAlignment="Top" Height="33" Width="82" FontSize="20"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="371,41,29,97"/>
+        <TextBox x:Name="txtIdUsuario" HorizontalAlignment="Left" Margin="65,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" Height="32" Background="#FFFFC04F" BorderBrush="#FFF8EFEF"/>
+        <TextBlock HorizontalAlignment="Left" Margin="66,19,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="183,22,0,0" TextWrapping="Wrap" Text="Tipo Usuário" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtNomeUsuario" HorizontalAlignment="Left" Margin="66,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="37" Background="#FFFEBC4E" BorderBrush="#FFFAF9F6"/>
+        <TextBox x:Name="txtEmailUsuario" HorizontalAlignment="Left" Margin="66,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="41" Background="#FFF7A947" BorderBrush="#FFEAEAEE"/>
+        <TextBox x:Name="txtxSenhaU" HorizontalAlignment="Left" Margin="67,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Height="37" BorderBrush="White" Background="#FFF29B42"/>
+        <TextBox x:Name="txtConfirmarSenha" HorizontalAlignment="Left" Margin="65,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" Height="38" Background="#FFED8B3C" BorderBrush="#FFECF0F4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="65,91,0,0" TextWrapping="Wrap" Text="Nome" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="67,158,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="67,229,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,294,0,0" TextWrapping="Wrap" Text="Confirmar Senha" VerticalAlignment="Top" FontSize="16"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="371,41,29,97" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id"/>
+                <DataGridTextColumn Header="Nome"/>
+                <DataGridTextColumn Header="E-mail"/>
+                <DataGridTextColumn Header="Senha"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnNovoUsuario" Content="Novo" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="77" FontSize="14" BorderBrush="#FF707070" Margin="41,381,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCAFF4C" Offset="0"/>
+                    <GradientStop Color="#FF5E9A3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="77" FontSize="14" BorderBrush="#FF707070" Margin="129,381,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCAFF4C" Offset="0"/>
+                    <GradientStop Color="#FF5E9A3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="77" FontSize="14" BorderBrush="#FF707070" Margin="215,381,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCAFF4C" Offset="0"/>
+                    <GradientStop Color="#FF5E9A3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLimpar" Content="Limpar" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="77" FontSize="14" BorderBrush="#FF707070" Margin="304,381,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCAFF4C" Offset="0"/>
+                    <GradientStop Color="#FF5E9A3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

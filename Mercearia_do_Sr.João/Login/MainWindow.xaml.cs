@@ -62,7 +62,7 @@ namespace Mercearia_do_Sr.João
             Usuario usuario = ConsultasUsuario.ObterUsuarioPeloEmailSenha(email, senha);
             if (usuario != null)
             {
-                AbrirMenu();
+                AbrirMenu(usuario.nome, usuario.tipoUsuario);
             }
             else
             {

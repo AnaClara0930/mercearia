@@ -24,9 +24,5 @@ namespace Mercearia_do_Sr.João
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
     }
 }

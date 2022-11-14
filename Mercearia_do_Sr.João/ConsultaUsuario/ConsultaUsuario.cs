@@ -7,6 +7,38 @@ using System.Threading.Tasks;
 
 public static class ConsultasUsuario
 {
+    public static bool VerificaUsuarioExixtente(string email)
+    {
+        var conexao = new MySqlConnection(ConexaoBD.Conexao.ConnectionString);
+        bool usuarioExistente = false;
+
+        try
+        {
+            conexao.Open();
+            var comando = conexao.CreateCommand();
+            comando.CommandText = @"Select * from Uauario Where email = @email";
+            comando.Parameters.AddWithValue("@email", email);
+            var leitura = comando.ExecuteReader();
+            while (leitura.Read())
+            {
+                usuarioExistente = true;
+                break;
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            if (conexao.State == System.Data.ConnectionState.Open)
+            {
+                conexao.Close();
+            }
+        }
+        return usuarioExistente;
+
+    }    
     public static Usuario ObterUsuarioPeloEmailSenha (string senha, string email)
     {
         var conexao = new MySqlConnection(ConexaoBD.Conexao.ConnectionString);
@@ -17,7 +49,7 @@ public static class ConsultasUsuario
         {
             conexao.Open();
             var comando = conexao.CreateCommand();
-            comando.CommandText = @"Select * from Uauario Where email = @email and senha = @senha";
+            comando.CommandText = @"Select * from Usuario Where email = @email and senha = @senha";
             comando.Parameters.AddWithValue("@email", email);
             comando.Parameters.AddWithValue("@senha", senhaCriptografada);
             var leitura = comando.ExecuteReader();
@@ -44,4 +76,7 @@ public static class ConsultasUsuario
 
         return usuario;
     }
+        
+        
+    
 }
