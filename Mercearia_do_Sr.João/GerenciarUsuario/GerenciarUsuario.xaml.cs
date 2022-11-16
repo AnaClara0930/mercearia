@@ -96,7 +96,7 @@ namespace Mercearia_do_Sr.João
             bool alterar = cUsuario.AlterarUsuario(txtNomeUsuario.Text, txtEmailUsuario.Text, txtSenha1.Password);
             if (alterar == true)
             {
-
+                cUsuario.AlterarUsuario(txtNomeUsuario.Text, txtEmailUsuario.Text, txtSenha1.Password);
             }
             else
             {
@@ -113,7 +113,7 @@ namespace Mercearia_do_Sr.João
             bool excluir = cUsuario.ExcluirUsuario(txtNomeUsuario.Text, txtEmailUsuario.Text, txtSenha1.Password);
             if (excluir == true)
             {
-
+                cUsuario.ExcluirUsuario(txtNomeUsuario.Text, txtEmailUsuario.Text, txtSenha1.Password);
             }
             else
             {

@@ -24,5 +24,55 @@ namespace Mercearia_do_Sr.João
             InitializeComponent();
         }
 
+        private void CadastrarProduto(object sender, RoutedEventArgs e)
+        {
+            if (VerificaCampos() == true)
+            {
+                string nome = txtNomeProduto.Text;
+                string precoUnitario = txtPrecoUnid.Text;
+                string quantidade = txtQtdProduto.Text;
+                string fornecedor = txtFornecedor.Text;
+                bool produtoExiste = ConsultasUsuario.VerificaUsuarioExixtente(nome);
+                if (produtoExiste == false)
+                {
+                    bool validarCadastor = ConsultaProduto.NovoProduto(nome, precoUnitario, fornecedor);
+                    if (validarCadastor == true)
+                    {
+                        MessageBoxResult result = MessageBox.Show(
+                         "Produto cadastrado com sucesso !",
+                         "Informação",
+                          MessageBoxButton.OK,
+                          MessageBoxImage.Information
+                         );
+                    }
+                }
+                else
+                {
+                    MessageBoxResult result = MessageBox.Show(
+                    "Email já existe no sistema",
+                    "Atenção",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error
+                    );
+                }
+            }
+        }
+        private bool VerificaCampos()
+        {
+            if (txtNomeProduto.Text != "" && txtFornecedor.Text != "" )
+            {
+                 return false;            
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show(
+                   "Preencha todos os campos",
+                   "Atenção",
+                   MessageBoxButton.OK,
+                   MessageBoxImage.Warning
+                );
+                return false;
+            }
+        }
     }
 }

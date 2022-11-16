@@ -16,7 +16,7 @@ public static class ConsultasUsuario
         {
             conexao.Open();
             var comando = conexao.CreateCommand();
-            comando.CommandText = @"Select * from Uauario Where email = @email";
+            comando.CommandText = @"Select * from Usuario Where email = @email";
             comando.Parameters.AddWithValue("@email", email);
             var leitura = comando.ExecuteReader();
             while (leitura.Read())
