@@ -68,7 +68,70 @@ public static class ConsultasUsuario
         }
         return foiInserido;
     }
-    public static Usuario ObterUsuarioPeloEmailSenha (string senha, string email)
+
+    public static bool AlterarUsuario(string nome, string email, string senha)
+    {
+        var conexao = new MySqlConnection(ConexaoBD.Conexao.ConnectionString);
+        bool foiInserido = false;
+        string senhaCriptografada = Criptografia.CriptografiafarBase64(senha);
+
+        try
+        {
+            conexao.Open();
+            var comando = conexao.CreateCommand();
+            comando.CommandText = @"Update Usuario (nome,email,senha) values (@email,@senha)";
+            comando.Parameters.AddWithValue("@nome", nome);
+            comando.Parameters.AddWithValue("@email", email);
+            comando.Parameters.AddWithValue("@senha", senhaCriptografada);
+            var leitura = comando.ExecuteReader();
+            foiInserido = true;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            if (conexao.State == System.Data.ConnectionState.Open)
+            {
+                conexao.Close();
+            }
+        }
+        return foiInserido;
+    }
+
+    public static bool ExcluirUsuario(string nome, string email, string senha)
+    {
+        var conexao = new MySqlConnection(ConexaoBD.Conexao.ConnectionString);
+        bool foiInserido = false;
+        string senhaCriptografada = Criptografia.CriptografiafarBase64(senha);
+
+        try
+        {
+            conexao.Open();
+            var comando = conexao.CreateCommand();
+            comando.CommandText = @"Delete from Usuario (nome,email,senha) values (@email,@senha)";
+            comando.Parameters.AddWithValue("@nome", nome);
+            comando.Parameters.AddWithValue("@email", email);
+            comando.Parameters.AddWithValue("@senha", senhaCriptografada);
+            var leitura = comando.ExecuteReader();
+            foiInserido = true;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            if (conexao.State == System.Data.ConnectionState.Open)
+            {
+                conexao.Close();
+            }
+        }
+        return foiInserido;
+    }
+
+    public static Usuario ObterUsuarioPeloEmailSenha(string senha, string email)
     {
         var conexao = new MySqlConnection(ConexaoBD.Conexao.ConnectionString);
         Usuario usuario = null;
@@ -102,10 +165,6 @@ public static class ConsultasUsuario
                 conexao.Close();
             }
         }
-
         return usuario;
     }
-        
-        
-    
 }

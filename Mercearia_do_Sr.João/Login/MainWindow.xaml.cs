@@ -51,29 +51,24 @@ namespace Mercearia_do_Sr.João
                 MessageBoxImage.Warning
                 );
             }
-            
+
         }
-
-
-        private void Click_Entrar(object sender, RoutedEventArgs e)
+        private bool VerificaCampos()
         {
-            string email = txtEmail.Text;
-            string senha = txtPassword.Password;
-            Usuario usuario = ConsultasUsuario.ObterUsuarioPeloEmailSenha(email, senha);
-            if (usuario != null)
+            if (txtEmail.Text != "" && txtPassword.Password != "")
             {
-                AbrirMenu(usuario.nome, usuario.tipoUsuario);
+                return true;
             }
             else
             {
                 MessageBoxResult result = MessageBox.Show(
-                "Email ou senha incorretos",
-                "Atenção",
-                MessageBoxButton.OK,
-                MessageBoxImage.Warning
+                   "Preencha todos os campos",
+                   "Atenção",
+                   MessageBoxButton.OK,
+                   MessageBoxImage.Warning
                 );
+                return false;
             }
-            
         }
 
         private void Click_EsqueceuSenha(object sender, RoutedEventArgs e)

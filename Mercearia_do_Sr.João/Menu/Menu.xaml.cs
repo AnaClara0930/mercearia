@@ -18,11 +18,7 @@ namespace Mercearia_do_Sr.João
     /// Lógica interna para Menu.xaml
     /// </summary>
     public partial class Menu : Window
-    {
-        public Menu()
-        {
-             
-        }
+    {        
         public Menu(string nome, string tipo)
         {
             InitializeComponent();       

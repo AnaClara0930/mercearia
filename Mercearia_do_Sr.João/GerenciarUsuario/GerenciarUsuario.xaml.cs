@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySqlConnector;
 
 namespace Mercearia_do_Sr.João
 {
@@ -23,19 +24,16 @@ namespace Mercearia_do_Sr.João
         {
             InitializeComponent();
         }
-        private void AbrirTelaMenu()
-        {
-            Menu tela = new Menu();
-            tela.Show();
-           
-        }       
-        private void CadastrarUsuario()
+
+        private void CadastrarUsuario(object sender, RoutedEventArgs e)
         {
             if (VerificaCampos() == true)
             {
                 string nome = txtNomeUsuario.Text;
                 string email = txtEmailUsuario.Text;
                 string senha = txtSenha1.Password;
+                CbTipoUsuario.Items.Add("Gerente");
+                CbTipoUsuario.Items.Add("Caixa");
                 bool usuarioExiste = ConsultasUsuario.VerificaUsuarioExixtente(email);
                 if (usuarioExiste == false)
                 {
@@ -48,7 +46,6 @@ namespace Mercearia_do_Sr.João
                           MessageBoxButton.OK,
                           MessageBoxImage.Information
                          );
-                        AbrirTelaMenu();
                     }
                 }
                 else
@@ -94,10 +91,39 @@ namespace Mercearia_do_Sr.João
             }
         }
 
-        private void Click_NovoUsuario(object sender, RoutedEventArgs e)
+        private void Alterar(object sender, RoutedEventArgs e)
         {
-            CadastrarUsuario();
-            VerificaCampos();
+            bool alterar = cUsuario.AlterarUsuario(txtNomeUsuario.Text, txtEmailUsuario.Text, txtSenha1.Password);
+            if (alterar == true)
+            {
+
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show(
+                   "Não foi possivel alterar",
+                   "Atenção",
+                   MessageBoxButton.OK,
+                   MessageBoxImage.Warning
+                );
+            }
+        }
+        private void Excluir(object sender, RoutedEventArgs e)
+        {
+            bool excluir = cUsuario.ExcluirUsuario(txtNomeUsuario.Text, txtEmailUsuario.Text, txtSenha1.Password);
+            if (excluir == true)
+            {
+
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show(
+                   "Não foi possivel excluir",
+                   "Atenção",
+                   MessageBoxButton.OK,
+                   MessageBoxImage.Warning
+                );
+            }
         }
     }
 }
